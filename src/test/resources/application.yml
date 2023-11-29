@@ -1,0 +1,27 @@
+context:
+  initializer:
+    classes: accenture.training.javacoin.config.TestContextInitializer
+
+spring:
+  jpa:
+    defer-datasource-initialization: true
+
+exchange:
+  name: order_exchange
+
+queue:
+  name: order_queue
+
+routingKey:
+  name: someRoutingKey
+
+fee:
+  tier1:
+    amount: 1.05
+    operations: 3
+  tier2:
+    amount: 1.03
+    operations: 6
+  tier3:
+    amount: 1
+    operations: 7

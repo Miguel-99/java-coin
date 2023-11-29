@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    username: sa
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+  jpa:
+    defer-datasource-initialization: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+exchange:
+  name: order_exchange
+
+queue:
+  name: order_queue
+
+routingKey:
+  name: someRoutingKey
+
+fee:
+  tier1:
+    amount: 1.05
+    operations: 3
+  tier2:
+    amount: 1.03
+    operations: 6
+  tier3:
+    amount: 1
+    operations: 7
